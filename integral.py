@@ -43,8 +43,6 @@ plt.show()
 
 samples = [random.uniform(0, 2) ** 2 > random.uniform(0, 4) for _ in range(100000)]
 
-# Зі збільшенням кількості точок результат обрахунку площі наближається до значення інтеграла
-
 print(len(list(filter(bool, samples))) / 100000 * b * f(b))
 result, error = quad(f, a, b)
 print(result, error)
